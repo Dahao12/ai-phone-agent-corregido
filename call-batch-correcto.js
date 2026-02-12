@@ -68,12 +68,10 @@ async function runBatch() {
     console.log(`[${index}/${batch.length}] ${client.name} - ${client.phone}`);
 
     try {
-      // ✅ CORREGIDO: Llamada saliente directa
-      const response = await zadarma.call('/v1/request/callback/', {
-        from: config.zadarma.fromNumber.replace(/\+/, ''),  // Número de salida +34936941917 → 34936941917
-        to: client.phone.replace(/\+/, ''),                 // Destino
-        predicted: 1
-        // ❌ NO incluir 'sip' - eso crea llamadas entrantes al PBX
+      // ✅ LLAMADA PBX DIRECTA usando SIP ID
+      const response = await zadarma.call('/v1/pbx/request/call/', {
+        sip: config.zadarma.pbx.sipId,           // 249312
+        number: client.phone.replace(/\D/g, '')   // Destino: +34610243061 → 34610243061
       });
 
       console.log('✅ Llamada iniciada:', response);

@@ -1,14 +1,14 @@
 {
   "zadarma": {
-    "apiKey": "ac5d629484b7b7f7d715",
-    "secret": "37fa40eb003ee9987622",
-    "email": "enerlux.soluciones@gmail.com",
-    "baseUrl": "https://api.zadarma.com/v1",
+    "apiKey": "e44e9700107ae400f471",
+    "secret": "8acc083f9511f2ca9c2c",
     "fromNumber": "+34936941917",
     "pbx": {
-      "url": "pbx.zadarma.com",
-      "extension": "547736-102",
-      "password": "hCbud5Y8RS"
+      "sipId": 249312,
+      "extension": "100",
+      "user": "547736-100",
+      "password": "hCbud5Y8RS",
+      "domain": "pbx.zadarma.com"
     }
   },
   "ollama": {
