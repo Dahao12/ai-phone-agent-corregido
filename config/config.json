@@ -1,0 +1,65 @@
+{
+  "zadarma": {
+    "apiKey": "ac5d629484b7b7f7d715",
+    "secret": "37fa40eb003ee9987622",
+    "email": "enerlux.soluciones@gmail.com",
+    "baseUrl": "https://api.zadarma.com/v1",
+    "fromNumber": "+34936941917",
+    "pbx": {
+      "url": "pbx.zadarma.com",
+      "extension": "547736-102",
+      "password": "hCbud5Y8RS"
+    }
+  },
+  "ollama": {
+    "baseUrl": "http://localhost:11434/api",
+    "model": "llama3.1:8b",
+    "temperature": 0.7
+  },
+  "gtts": {
+    "lang": "es",
+    "tld": "es",
+    "slow": false
+  },
+  "openai": {
+    "apiKey": "sk-REPLACE_WITH_OPENAI_API_KEY",
+    "model": "gpt-4-turbo-preview",
+    "ttsModel": "tts-1",
+    "ttsVoice": "alloy",
+    "whisperModel": "whisper-1"
+  },
+  "caller": {
+    "schedule": {
+      "startHour": 9,
+      "startMinute": 0,
+      "endHour": 19,
+      "endMinute": 30,
+      "weekdays": [1, 2, 3, 4, 5],
+      "timezone": "Europe/Madrid"
+    },
+    "voicemailPolicy": {
+      "noAnswerTimeout": 15,
+      "action": "hangup",
+      "moveToNextClient": true
+    },
+    "retryPolicy": {
+      "maxAttempts": 1,
+      "retryDelay": 0
+    },
+    "callSettings": {
+      "maxRetries": 1,
+      "dialTimeout": 30,
+      "maxCallDuration": 180
+    }
+  },
+  "clients": {
+    "csvPath": "/Users/clowd/.openclaw/workspace/ai-phone-agent/clients.csv",
+    "batchSize": 10,
+    "initialStatus": "Not processed",
+    "statuses": ["Not processed", "Called", "Answered", "Voicemail", "Interested", "Not Interested"]
+  },
+  "webhook": {
+    "url": "",
+    "port": 3000
+  }
+}

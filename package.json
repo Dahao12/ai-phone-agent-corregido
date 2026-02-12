@@ -1,0 +1,34 @@
+{
+  "name": "ai-phone-agent",
+  "version": "1.0.0",
+  "description": "AI Phone Agent - Sistema de llamadas automáticas con Zadarma + OpenAI",
+  "main": "phone-agent.js",
+  "scripts": {
+    "start": "node phone-agent.js",
+    "webhooks": "node phone-agent-webhooks.js",
+    "test": "node test-system.js",
+    "install-deps": "npm install"
+  },
+  "keywords": [
+    "ai",
+    "phone",
+    "automation",
+    "zadarma",
+    "openai",
+    "enerlux",
+    "calls",
+    "voice"
+  ],
+  "author": "Shide (OpenClaw Assistant)",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "body-parser": "^1.20.2",
+    "csv-parse": "^6.1.0",
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.4.1",
+    "express": "^4.19.0",
+    "zadarma-api": "^1.0.3"
+  }
+}
