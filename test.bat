@@ -43,4 +43,8 @@ echo ====================================
 echo   PRUEBA COMPLETADA
 echo ====================================
 echo.
+echo Resultado:
+echo - Si recibiste la llamada del numero Zadarma: EXITO ✓
+echo - Si fue llamada entrante al PBX: Revisa config
+echo.
 pause

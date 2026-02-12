@@ -20,7 +20,7 @@ if not exist config\config.json (
     pause
     exit /b 1
 )
-OK: Configuracion encontrada
+echo OK: Configuracion encontrada
 
 echo.
 echo [2/3] Verificando clientes...
@@ -33,7 +33,7 @@ if not exist clients.csv (
 REM Contar lineas del CSV
 for /f %%A in ('type clients.csv ^| find /c /v ""') do set LINES=%%A
 set /a CLIENTS=%LINES%-1
-echo OK: %CLIENTS% clientes cargados
+echo OK: %CLIENTS% clientes encontrados
 
 echo.
 echo [3/3] Verificando cache...
@@ -53,6 +53,7 @@ echo Este procesamiento:
 echo - Llamara solo a clientes pendientes
 echo - Guardara progreso en cache
 echo - Podra reiniciar y continuar
+echo - Llamadas seran SALIENTES (corregido)
 echo.
 echo Presiona CTRL+C para cancelar
 echo.
