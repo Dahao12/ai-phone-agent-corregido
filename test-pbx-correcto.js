@@ -24,9 +24,10 @@ async function testPBX() {
   // Para PBX, necesitas usar la extensión SIP interna
   // NO el número público (+34936941917)
 
-  const extension = '547736102'; // ← CAMBIA ESTO a tu extensión SIP interna
-  console.log(`\n[2/3] Extensión SIP: ${extension}`);
-  console.log(`[2/3] Número público: +34936941917`);
+  const extension = '547736-100'; // ← TU EXTENSION SIP INTERNA (Extension 100)
+  console.log(`\n[2/3] Extension: ${extension}`);
+  console.log(`[2/3] Nombre: Extension 100`);
+  console.log(`[2/3] Caller ID: +34936941917`);
   console.log(`[2/3] Destino: +34610243061\n`);
 
   console.log('[3/3] Haciendo llamada PBX...\n');
